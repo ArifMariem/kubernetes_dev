@@ -1,0 +1,23 @@
+import pytest
+from app.repositories import OperateurRepository
+from app.models import Operateur
+
+@pytest.fixture
+def repository():
+    return OperateurRepository()
+
+def test_get_operateur_by_id(repository):
+    # Assuming operateur_id 1 exists in the database
+    operateur = repository.get_operateur_by_id(1)
+    assert operateur.idOperateur == 1
+
+def test_create_operateur(repository):
+    # Create a new Operateur
+    new_operateur = Operateur(idOperateur=2, nom="John", prenom="Doe", password="password")
+    created_operateur = repository.create_operateur(new_operateur)
+    
+    # Check if the new Operateur was created successfully
+    assert created_operateur.idOperateur == 2
+    assert created_operateur.nom == "John"
+    assert created_operateur.prenom == "Doe"
+    assert created_operateur.password == "password"
