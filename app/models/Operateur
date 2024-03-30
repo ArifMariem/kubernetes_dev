@@ -1,9 +1,0 @@
-from pydantic import BaseModel
-from typing import Set
-
-class Operateur(BaseModel):
-    idOperateur: int
-    nom: str
-    prenom: str
-    password: str
-    factures: Set[int] = None

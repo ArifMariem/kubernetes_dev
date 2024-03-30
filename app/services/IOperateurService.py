@@ -5,7 +5,7 @@ from models import Operateur
 class IOperateurService(ABC):
 
     @abstractmethod
-    def retrieve_all_operateurs(self) -> List[Operateur]:
+    def retrieve_all_operateurs(self) -> List[Operateur.Operateur]:
         pass
 
     @abstractmethod

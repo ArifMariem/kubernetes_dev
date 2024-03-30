@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
 from typing import List
-from models import Operateur
+from models.models import Operateur
 from services import IOperateurService
 
 router = APIRouter()

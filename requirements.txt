@@ -1,1 +1,3 @@
 pandas==1.4.4
+pymysql
+pytest-mock
